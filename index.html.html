@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Freshen Up Property Cleaning Services | Brisbane</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Freshen Up Property Cleaning Services provides professional pressure washing, soft washing and exterior cleaning across Brisbane. Detail-focused, safe property cleaning." />
+
+  <style>
+    :root {
+      /* Brand colours pulled from your logo */
+      --brand-dark: #00558f;
+      --brand-mid: #1b84c6;
+      --brand-light: #8fd0f5;
+      --bg-soft: #f4f5f7;
+      --text-main: #1f2933;
+      --text-muted: #52606d;
+      --border-soft: #dde3eb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      color: var(--text-main);
+      background: var(--bg-soft);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* HEADER / NAV */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-soft);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem 0;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .brand-logo {
+      height: 48px;
+      width: auto;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .brand-name {
+      font-weight: 800;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: linear-gradient(90deg, var(--brand-dark), var(--brand-mid));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .brand-sub {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      padding: 0.35rem 0.6rem;
+      border-radius: 999px;
+    }
+
+    .nav-links a:hover {
+      background: rgba(27, 132, 198, 0.08);
+    }
+
+    .nav-phone {
+      font-weight: 600;
+      font-size: 0.95rem;
+      white-space: nowrap;
+      color: var(--brand-dark);
+    }
+
+
+    .hero-image {
+      max-height: 620px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .hero-image-large { max-height: 720px; }
+
+    .hero-image {
+      max-height: 620px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .results-card {
+      background: #ffffff;
+      border-radius: 1.25rem;
+      padding: 1.5rem 1.25rem;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .results-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--brand-dark);
+    }
+
+    .results-card .hero-list {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* HERO */
+    .hero {
+      background: radial-gradient(circle at top left, var(--brand-light) 0, var(--brand-mid) 42%, var(--brand-dark) 100%);
+      color: #ffffff;
+      padding: 2.75rem 0 2.5rem;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      margin-bottom: 0.75rem;
+      background: rgba(0, 0, 0, 0.08);
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 3vw + 1rem, 2.8rem);
+      margin-bottom: 0.6rem;
+    }
+
+    .hero p {
+      font-size: 0.98rem;
+      max-width: 31rem;
+      opacity: 0.95;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.25rem;
+      padding: 0.65rem 1.25rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.12s ease;
+    }
+
+    .btn-primary {
+      background: #ffffff;
+      color: var(--brand-dark);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      color: #ffffff;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-note {
+      font-size: 0.78rem;
+      opacity: 0.9;
+    }
+
+    .hero-card {
+      background: transparent;
+      border: none;
+      padding: 0;
+      box-shadow: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-card h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-card p {
+      font-size: 0.85rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-list {
+      list-style: none;
+      font-size: 0.82rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.4rem 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-list li::before {
+      content: "✦";
+      margin-right: 0.4rem;
+      font-size: 0.8rem;
+    }
+
+    .hero-small {
+      font-size: 0.75rem;
+      opacity: 0.9;
+    }
+
+    /* SECTION WRAPPER */
+    section {
+      padding: 2.5rem 0;
+    }
+
+    section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.4rem;
+      color: #102a43;
+    }
+
+    section p.section-intro {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    /* SERVICES */
+    .work-section {
+      padding: 2.5rem 0;
+    }
+
+    .work-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: #102a43;
+    }
+
+    .work-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .work-gallery img {
+      width: 32%;
+      border-radius: 0.75rem;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18);
+    }
+
+    @media (max-width: 800px) {
+      .work-gallery img {
+        width: 100%;
+      }
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border-radius: 1rem;
+      padding: 1.1rem;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+    }
+
+    .service-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+      color: var(--brand-dark);
+    }
+
+    .service-card p {
+      font-size: 0.9rem;
+      color: #616e7c;
+      margin-bottom: 0.6rem;
+    }
+
+    .service-meta {
+      font-size: 0.8rem;
+      color: #8291a4;
+    }
+
+    /* ABOUT / WHY US */
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 1.75rem;
+      align-items: start;
+    }
+
+    .pill-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.7rem;
+    }
+
+    .pill-list li {
+      font-size: 0.78rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(27, 132, 198, 0.12);
+      color: var(--brand-dark);
+      border: 1px solid rgba(27, 132, 198, 0.15);
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 1rem;
+      padding: 1.1rem;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .card strong {
+      color: var(--brand-dark);
+    }
+
+    /* SERVICE AREA */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      list-style: none;
+      font-size: 0.85rem;
+    }
+
+    .tags li {
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 1px solid var(--border-soft);
+      color: #334e68;
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1.75rem;
+      align-items: start;
+    }
+
+    form {
+      background: #ffffff;
+      border-radius: 1rem;
+      padding: 1.25rem;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+    }
+
+    .form-row {
+      margin-bottom: 0.75rem;
+    }
+
+    label {
+      display: block;
+      font-size: 0.82rem;
+      margin-bottom: 0.2rem;
+      color: var(--text-muted);
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.55rem 0.65rem;
+      border-radius: 0.55rem;
+      border: 1px solid #cbd2d9;
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--brand-mid);
+      box-shadow: 0 0 0 1px rgba(27, 132, 198, 0.18);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .contact-details {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .contact-details p {
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-details a {
+      color: var(--brand-dark);
+      font-weight: 600;
+    }
+
+    .small-note {
+      font-size: 0.8rem;
+      color: #9fb3c8;
+      margin-top: 0.5rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #041420;
+      color: #9fb3c8;
+      padding: 1.25rem 0;
+      font-size: 0.8rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-inner a {
+      color: #d8e2ec;
+    }
+
+    @media (max-width: 800px) {
+      .hero-inner,
+      .split,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero {
+        padding-top: 2rem;
+      }
+
+      .hero-card {
+      background: transparent;
+      border: none;
+      padding: 0;
+      box-shadow: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-phone {
+        font-size: 0.85rem;
+      }
+
+      .brand-logo {
+        height: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="logo_no_bg.png" alt="Freshen Up Logo" style="height:60px; margin-right:15px;">
+        <!-- Put your logo file (logo.png) in the same folder as this HTML -->
+        
+        <div class="brand-text">
+          <div class="brand-name">Freshen Up</div>
+          <div class="brand-sub">Property Cleaning Services</div>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">Why us</a>
+        <a href="#area">Service area</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-phone">
+        <a href="tel:0452200863">Call 0452 200 863</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <div class="hero-tag">Brisbane Based Exterior Property Cleaning</div>
+        <h1>Freshen up your Brisbane property with safe, professional cleaning.</h1>
+        <p>
+          Freshen Up Property Cleaning Services provides careful, detail-focused pressure washing, soft washing and exterior cleaning to help your residential or commercial property look its best again. The buildup of dirt and organic growth overtime often leaves properties looking unrecognizable, our services provide genuine value by restoring your exterior surfaces back to the fresh, bright and clean condition that they once were.
+        </p>
+        <div class="hero-actions">
+          <a href="tel:0452200863" class="btn btn-primary">📞 Call for a free quote</a>
+          <a href="#contact" class="btn btn-ghost">Get a fast online estimate</a>
+        </div>
+        <p class="hero-note">Residential & light commercial · Fully insured · Servicing all Brisbane suburbs</p>
+      </div>
+
+      
+
+
+<aside class="hero-image-wrapper"><img class="hero-image" src="logo 22.png" alt="Freshen Up Logo Large"></aside>
+
+
+
+    </div>
+  </section>
+
+
+  <!-- RESULTS / BEFORE-AFTER SECTION -->
+  <section id="results">
+    <div class="container">
+      <div class="results-card">
+<h3>Before / After Our Services:</h3>
+        <p>
+          You will notice significant visual enhancement to the exterior of your residential or commercial property.
+          Pressure cleaning / Soft washing is often overlooked as a way to improve your properties visual appeal, 
+          when in most cases it can be the quickest, easiest and most cost-effective way to do so. Great cleaning 
+          comes down to the little things, at Freshen Up we use consistent processes, High Quality Equipment, the 
+          right chemicals, and work with respect for your property to deliver the ideal results in both residential 
+          and commercial jobs. If you require any of the services below:
+        </p>
+        <ul class="hero-list">
+          <li>Driveway, Concrete or Paved Surface Clean</li>
+          <li>Exterior Wall soft washing</li>
+          <li>Gutter Cleaning</li>
+          <li>Fence / Retaining Wall Cleaning</li>
+        </ul>
+        <p class="hero-small">
+          Email, Call or Send us a photo for a quick Quote estimate today.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <h2>Services</h2>
+      <p class="section-intro">
+        We handle the exterior cleaning jobs that make the biggest difference to street appeal and property value. If you’re not sure what you need, just ask – we can recommend the safest option for your Brisbane property.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          
+<h3>Pressure washing</h3>
+<p>
+  Deep clean driveways, paths, patios and hard surfaces to lift dirt, mould and staining. 
+  Pretreating the surface with the correct chemical mix is also an option and often produces a far better result, 
+  especially on heavily soiled, mouldy or stained surfaces. Ideal for concrete, pavers and most hardstand areas.
+</p>
+<div class="service-meta">Driveways · Paths · Patios · Carparks</div>
+
+        </div>
+
+        <div class="service-card">
+          
+
+<h3>Soft washing</h3>
+<p>
+  Low-pressure cleaning using the correct chemical mix to safely wash houses and delicate surfaces without causing any damage to paint, render or cladding.
+  Soft washing is ideal for removing organic growth, cobwebs, grime and atmospheric pollution on exterior walls and eaves. Ideal for delicate surfaces where high pressure is not to be used.
+</p>
+<div class="service-meta">House exteriors · Eaves · Render · Cladding</div>
+
+
+        </div>
+
+        <div class="service-card">
+          
+<h3>Gutter Cleaning</h3>
+<p>
+  Regular gutter cleaning is essential to prevent blockages, water overflow, and potential property damage. 
+  By ensuring your gutters remain clear, you protect your roofline, prevent leaks, and maintain proper drainage 
+  around your home or commercial property.
+</p>
+<div class="service-meta">Gutter debris removal · Downpipe flushing · Overflow prevention</div>
+
+        </div>
+
+        <div class="service-card">
+          
+
+<h3>Exterior detail & extras</h3>
+<p>
+  We also take care of the other exterior elements that complete the overall presentation of your property. 
+  Detailed cleaning of fences, retaining walls, entryways and outdoor feature areas can significantly enhance 
+  the visual impact of your home or commercial property.
+</p>
+<div class="service-meta">Fences · Feature walls · Outdoor areas</div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="our-work" class="work-section">
+    <div class="container">
+      <h2>Some of our Work</h2>
+      <div class="work-gallery">
+        <img src="path.jpeg" alt="Before and after path cleaning" />
+        <img src="rockwall.jpeg" alt="Before and after rock wall cleaning" />
+        <img src="hut.jpeg" alt="Before and after patio cleaning" />
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ABOUT / WHY US -->
+  <section id="about">
+    <div class="container split">
+      <div>
+        <h2>Why choose Freshen Up?</h2>
+        <p class="section-intro">
+          You’re trusting someone with your home or investment, so we treat every job like it’s our own place. That means clear communication, clean work and genuine respect for your property.
+        </p>
+        <p>
+          We take the time to understand the surface, choose the right pressure and chemicals, and work methodically so you get a consistent finish rather than patchy results.
+        </p>
+        <ul class="pill-list">
+          <li>Attention to detail</li>
+          <li>Friendly & reliable</li>
+          <li>Property-safe methods</li>
+          <li>Honest, upfront pricing</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <p><strong>How we work:</strong></p>
+        <p>
+          1. You contact us with a quick description (and photos if possible).<br />
+          2. We provide an estimate or arrange a site visit if it’s a larger job.<br />
+          3. On the day, we walk the site with you, confirm the plan and get to work.<br />
+          4. Before leaving, we do a final walk-through with you to make sure you’re happy.
+        </p>
+        <p class="small-note">
+          Getting ready for sale, a rental inspection or a strata meeting? Let us know your deadline and we’ll do our best to work around it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section id="area">
+    <div class="container">
+      <h2>Service area</h2>
+      <p class="section-intro">
+        Freshen Up Property Cleaning Services is based in Brisbane and services suburbs right across the city. If you’re unsure whether you’re in our area, just get in touch.
+      </p>
+      <ul class="tags">
+        <li>All Brisbane suburbs</li>
+        <li>Northside Brisbane</li>
+        <li>Southside Brisbane</li>
+        <li>Inner-city</li>
+        <li>Outer suburbs by arrangement</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container contact-grid">
+      <div>
+        <h2>Get a quote</h2>
+        <p class="section-intro">
+          Tell us a little about your Brisbane property and what you’d like cleaned. We’ll come back with an estimate or suggest a quick site visit if needed.
+        </p>
+
+        <!-- Contact form -->
+        <form action="mailto:freshen.up100@gmail.com" method="post" enctype="text/plain">
+          <div class="form-row">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="Name" required />
+          </div>
+          <div class="form-row">
+            <label for="phone">Phone *</label>
+            <input type="tel" id="phone" name="Phone" required />
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email" />
+          </div>
+          <div class="form-row">
+            <label for="suburb">Suburb</label>
+            <input type="text" id="suburb" name="Suburb" />
+          </div>
+          <div class="form-row">
+            <label for="message">What would you like cleaned?</label>
+            <textarea id="message" name="Message" placeholder="e.g. Double driveway + front path + front fence. Single-storey house."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send enquiry</button>
+          <p class="small-note">
+            This simple form uses your email program to send the message. Your details are only used to reply to your enquiry.
+          </p>
+        </form>
+      </div>
+
+      <aside class="contact-details">
+        <p><strong>Prefer to call or text?</strong></p>
+        <p>
+          Phone: <a href="tel:0452200863">0452 200 863</a><br />
+          (Call or SMS – photos of the job help speed things up.)
+        </p>
+        <p>
+          <strong>Business name:</strong><br />
+          Freshen Up Property Cleaning Services<br />
+          <strong>ABN:</strong> 36785776845
+        </p>
+        <p>
+          <strong>Email:</strong><br />
+          <a href="mailto:freshen.up100@gmail.com">freshen.up100@gmail.com</a>
+        </p>
+        <p>
+          Available: All Days, by appointment, across Brisbane.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Freshen Up Property Cleaning Services. All rights reserved.</div>
+      <div>Brisbane · Freshen Up Property Cleaning Services</div>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer automatically
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
